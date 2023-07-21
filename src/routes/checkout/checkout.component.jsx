@@ -27,15 +27,14 @@ const Checkout = () => {
     },
   ];
 
-  const getQuantitySum = () => {
-    let total = 0;
-    cartItems.forEach((item) => {
-      total += item.quantity * item.price;
-    });
-    setSum(total);
-  };
-
   useEffect(() => {
+    const getQuantitySum = () => {
+      let total = 0;
+      cartItems.forEach((item) => {
+        total += item.quantity * item.price;
+      });
+      setSum(total);
+    };
     getQuantitySum();
   }, [cartItems]);
   return (
