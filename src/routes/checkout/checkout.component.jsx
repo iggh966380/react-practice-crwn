@@ -7,8 +7,7 @@ import CheckoutItem from "../../components/checkout-item/checkout-item.component
 
 const Checkout = () => {
   const [sum, setSum] = useState(0);
-  const { cartItems, addItemToCart, removeItemFromCart } =
-    useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
 
   const headerContent = [
     {
